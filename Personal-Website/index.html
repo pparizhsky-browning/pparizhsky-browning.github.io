@@ -5,7 +5,9 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Peter Parizhsky — Portfolio</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -75,12 +77,12 @@
                         "unit": "8px"
                     },
                     "fontFamily": {
-                        "body-lg": ["Inter"],
-                        "headline-md": ["Noto Serif"],
-                        "body-md": ["Inter"],
-                        "display-xl": ["Noto Serif"],
-                        "label-caps": ["Inter"],
-                        "headline-lg": ["Noto Serif"]
+                        "body-lg": ["Gelasio"],
+                        "headline-md": ["Playfair Display SC"],
+                        "body-md": ["Gelasio"],
+                        "display-xl": ["Playfair Display SC"],
+                        "label-caps": ["Gelasio"],
+                        "headline-lg": ["Playfair Display SC"]
                     },
                     "fontSize": {
                         "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
@@ -135,35 +137,35 @@
   </svg>
 </div>
 <!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_40px_rgba(16,185,129,0.05)]">
-<div class="flex justify-between items-center w-full px-margin-safe py-6 max-w-container-max mx-auto">
-<div class="font-headline-md text-body-md tracking-[0.4em] uppercase text-on-surface dark:text-on-surface text-primary dark:text-primary-fixed-dim">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10">
+<div class="grid grid-cols-[1fr_auto_1fr] items-center w-full px-margin-safe py-6 max-w-container-max mx-auto">
+<a href="#" class="justify-self-start font-label-caps text-label-caps tracking-[0.4em] uppercase text-on-surface hover:text-tertiary transition-colors duration-300">
                 PETER PARIZHSKY
-            </div>
-<div class="hidden md:flex space-x-8 items-center">
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">About</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#resume">Resume</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#skills">Skills</a>
-<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+            </a>
+<div class="hidden md:flex space-x-8 items-center justify-self-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#about" data-nav-link>About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#resume" data-nav-link>Resume</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#skills" data-nav-link>Skills</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#contact" data-nav-link>Contact</a>
 </div>
-<a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-tertiary text-black font-label-caps text-label-caps hover:bg-tertiary-fixed-dim transition-all duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]" href="#contact">
+<a class="hidden md:inline-flex justify-self-end items-center justify-center px-5 py-2.5 border border-tertiary/40 text-tertiary font-label-caps text-label-caps hover:bg-tertiary hover:text-black transition-all duration-300" href="#contact">
                 Contact
             </a>
-<button id="mobile-menu-btn" class="md:hidden text-on-surface" aria-expanded="false" aria-label="Toggle menu">
+<button id="mobile-menu-btn" class="md:hidden justify-self-end text-on-surface" aria-expanded="false" aria-label="Toggle menu">
 <span class="material-symbols-outlined text-[24px]">menu</span>
 </button>
 </div>
-</nav>
 <!-- Mobile Menu Drawer -->
-<div id="mobile-menu" class="fixed top-[73px] inset-x-0 z-40 md:hidden hidden bg-surface/95 backdrop-blur-xl border-b border-white/10">
+<div id="mobile-menu" class="absolute top-full inset-x-0 md:hidden hidden bg-surface/95 backdrop-blur-xl border-b border-white/10">
 <div class="flex flex-col px-margin-safe py-6 gap-4 max-w-container-max mx-auto">
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300 py-2 border-b border-white/5" href="#about">About</a>
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300 py-2 border-b border-white/5" href="#resume">Resume</a>
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300 py-2 border-b border-white/5" href="#skills">Skills</a>
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300 py-2 border-b border-white/5" href="#contact">Contact</a>
-<a class="mt-2 inline-flex items-center justify-center px-6 py-3 bg-tertiary text-black font-label-caps text-label-caps" href="#contact">Get In Touch</a>
+<a class="mt-2 inline-flex items-center justify-center px-5 py-2.5 border border-tertiary/40 text-tertiary font-label-caps text-label-caps hover:bg-tertiary hover:text-black transition-all duration-300" href="#contact">Get In Touch</a>
 </div>
 </div>
+</nav>
 <!-- Main Canvas -->
 <main class="flex-grow">
 <!-- Hero Section -->
@@ -189,10 +191,10 @@
 </section>
 <!-- About Section -->
 <section class="py-section-gap px-margin-safe relative z-10 bg-background" id="about">
-<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter md:items-stretch">
 <div class="md:col-span-5 md:col-start-2 order-2 md:order-1 relative">
-<div class="rack-focus relative z-10 rounded-DEFAULT overflow-hidden shadow-[0_20px_40px_rgba(16,185,129,0.05)] bg-surface-container-high border border-white/10 p-2">
-<img alt="Abstract architectural form" class="w-full h-auto object-cover opacity-80 grayscale mix-blend-lighten" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQrjzttNeje5BHs5Qt5tn352flHw1s82qWonaikpEqTifrB58s8Zc23PB5Z9V4ljJ8Za2dIv8LnEhy8r-hRKLoXGnLRKeJ0QS04JpF1Upi8gNvYJ_P2assVrtpbJzJvpXYnQT7Hn641rBTOPuokHueV6c2A_U5LAIe-MuZeFobRRdTc19CYa53UoQUWEWKRdiV2sl2obY1ozclvzj_BmkaYzG7tfiuScoh2lx_n7Xkb1yyXEm-rCkeWGQiNOshJ3XfOdaR-8WIyKs"/>
+<div class="rack-focus relative z-10 rounded-DEFAULT overflow-hidden shadow-[0_20px_40px_rgba(16,185,129,0.05)] bg-surface-container-high border border-white/10 p-2 h-full">
+<img alt="Peter Parizhsky" class="w-full h-full object-contain" style="object-position: center bottom;" src="portrait.png"/>
 </div>
 <!-- Decorative Element -->
 <div class="absolute -bottom-8 -left-8 w-48 h-48 bg-tertiary/5 blur-3xl rounded-full z-0"></div>
@@ -204,13 +206,19 @@
                     </h2>
 <div class="font-body-lg text-body-lg text-on-surface-variant space-y-6">
 <p class="rack-focus">
-                            I'm Peter Parizhsky — a 10th grade student based in New York City with a passion for technology, entrepreneurship, and community. I founded my own web development and IT support company, Tech-Savvies, in 2020, and I've been building real-world projects and helping local businesses grow ever since.
+                            I'm Peter Parizhsky, a 10th grader in New York City. I started a web development and IT support company, Tech-Savvies, in 2020. I was 10 and mostly just wanted to build things and see what happened. It turned into actual work: websites for local businesses, some IT stuff, a lot of learning from what didn't work. I'm still running it.
                         </p>
-<p class="rack-focus" data-delay="150">
-                            Whether I'm writing code, leading a community initiative, or exploring a new book, I'm always looking for ways to create something meaningful. I love designing websites, gaming, writing, and giving back through volunteer work and community clubs.
+<ul class="rack-focus space-y-3" data-delay="150">
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span><strong>Technology &amp; Building:</strong> I like building websites and understanding how software works further down than most people go. I'm happiest when something I made is actually being used.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span><strong>Gaming:</strong> I play a lot of strategy games. I'd probably say it makes me think better about systems and tradeoffs, but I also just like playing.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span><strong>Writing &amp; Reading:</strong> I read pretty broadly, fiction, tech writing, whatever I find. Writing is something I've had to get better at deliberately, and I have.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span><strong>Community &amp; Volunteering:</strong> I run a club and do volunteer work. I started because I wanted to do something real outside of school, not just resume stuff.</span></li>
+</ul>
+<p class="rack-focus" data-delay="250">
+                            I'm planning on studying business or hospitality in college. After that I want to keep building things, whether that's through Tech-Savvies or somewhere else. I don't have every step figured out, but I know what direction I'm going.
                         </p>
-<p class="rack-focus" data-delay="300">
-                            Born and raised in New York City — a place that shaped the way I think about community, opportunity, and what it means to build something from scratch. Long-term, my goal is to study computer science or entrepreneurship and continue building technology that serves people.
+<p class="rack-focus" data-delay="350">
+                            I grew up in New York City. Growing up here, you're constantly around people who are nothing like you, and that changes how you see things. It's a big part of what led me to start Tastes of Home.
                         </p>
 </div>
 </div>
@@ -225,20 +233,20 @@
 <h2 class="rack-focus font-headline-lg text-headline-lg text-on-surface">Education &amp; Experience</h2>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-<!-- Tech-Savvies Card (full-width) -->
-<div class="rack-focus group relative block overflow-hidden rounded-DEFAULT bg-primary-container border border-white/5 md:col-span-2 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(16,185,129,0.1)] transition-all duration-700 p-10" data-delay="0">
+<div class="flex flex-col gap-gutter">
+<!-- Tech-Savvies Card -->
+<div class="rack-focus group relative block overflow-hidden rounded-DEFAULT bg-primary-container border border-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(16,185,129,0.1)] transition-all duration-700 p-10" data-delay="0">
 <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
 <div class="relative z-20">
 <span class="font-label-caps text-label-caps text-tertiary mb-3 block">01 / Work Experience</span>
 <h3 class="font-headline-md text-headline-md text-on-surface mb-1">Tech-Savvies</h3>
 <p class="font-label-caps text-label-caps text-on-surface-variant mb-6">Founder &amp; CEO · Founded 2020, Relaunched 2026 · New York City, NY · <a href="https://tech-savvies.com" class="text-tertiary hover:text-tertiary-fixed-dim transition-colors" target="_blank" rel="noopener">tech-savvies.com</a></p>
 <ul class="font-body-md text-body-md text-on-surface-variant space-y-3 max-w-3xl">
-<li class="flex gap-3"><span class="text-tertiary mt-1 shrink-0">—</span><span>Founded and operate a professional web development and IT support company serving small businesses on the Upper West Side of NYC.</span></li>
-<li class="flex gap-3"><span class="text-tertiary mt-1 shrink-0">—</span><span>Deliver custom-engineered websites with rapid 5-day launch turnarounds for local clients.</span></li>
-<li class="flex gap-3"><span class="text-tertiary mt-1 shrink-0">—</span><span>Services include new website builds, site modernization/rescue, Google Business Profile optimization, and social media presence setup.</span></li>
-<li class="flex gap-3"><span class="text-tertiary mt-1 shrink-0">—</span><span>Completed projects for clients including Gunn Brook Farm (Cornwall, CT), providing full digital infrastructure setup.</span></li>
-<li class="flex gap-3"><span class="text-tertiary mt-1 shrink-0">—</span><span>Manage all client communication, project scoping, technical execution, and branding independently.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Founded and operate a professional web development and IT support company serving small businesses on the Upper West Side of NYC.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Deliver custom-engineered websites with rapid 5-day launch turnarounds for local clients.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Services include new website builds, site modernization/rescue, Google Business Profile optimization, and social media presence setup.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Completed projects for clients including <a href="https://www.instagram.com/gbf_mainecoons/" class="text-tertiary hover:text-tertiary-fixed-dim transition-colors" target="_blank" rel="noopener">Gunn Brook Farm</a> (Cornwall, CT), providing social media presence and google business profile optimization, as well as <a href="https://grisha.studio/" class="text-tertiary hover:text-tertiary-fixed-dim transition-colors" target="_blank" rel="noopener">Gregory Parizhsky</a> creating a personal portfolio website.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Manage all client communication, project scoping, technical execution, and branding independently.</span></li>
 </ul>
 </div>
 </div>
@@ -248,24 +256,44 @@
 <div class="relative z-20">
 <span class="font-label-caps text-label-caps text-tertiary mb-3 block">02 / Education</span>
 <h3 class="font-headline-md text-headline-md text-on-surface mb-1">The Browning School</h3>
-<p class="font-label-caps text-label-caps text-on-surface-variant mb-6">10th Grade · Expected Graduation: 2028 · New York City, NY</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-6">10th Grade · Class of 2028 · New York City, NY</p>
 <ul class="font-body-md text-body-md text-on-surface-variant space-y-3">
-<li class="flex gap-3"><span class="text-tertiary mt-1 shrink-0">—</span><span>Honor Roll — 7th Grade through Present</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Honor Roll — 7th Grade through Present</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Middle School Shakespeare Award — 8th Grade</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Languages: studied Latin and French; currently continuing French</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Athletics: Varsity Cross Country, Varsity Baseball, Manager of the Browning Basketball Program</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Model UN — won 2nd place award at first conference attended</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Theater: member of the Browning Theater Workshop; lead roles in middle school Shakespeare productions, including Romeo in <em>Romeo and Juliet</em> and Ferdinand in <em>The Tempest</em></span></li>
 </ul>
 </div>
 </div>
-<!-- Tastes of Home Card -->
+<!-- Community Leadership Card -->
 <div class="rack-focus group relative block overflow-hidden rounded-DEFAULT bg-primary-container border border-white/5 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(16,185,129,0.1)] transition-all duration-700 p-10" data-delay="300">
 <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
 <div class="relative z-20">
-<span class="font-label-caps text-label-caps text-tertiary mb-3 block">03 / Extracurricular</span>
-<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Tastes of Home Club</h3>
-<p class="font-label-caps text-label-caps text-on-surface-variant mb-6">Co-Founder &amp; Leader · The Browning School · February 2026 – Present</p>
+<span class="font-label-caps text-label-caps text-tertiary mb-3 block">03 / Community Leadership</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Community Leadership</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-10">Founder &amp; Co-Founder · The Browning School</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Sub-block: Food Recovery -->
+<div class="md:border-r md:border-white/10 md:pr-gutter">
+<h4 class="font-headline-md text-body-lg text-on-surface mb-1">Middle School Food Recovery Club</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4">Founder · Middle School</p>
 <ul class="font-body-md text-body-md text-on-surface-variant space-y-3">
-<li class="flex gap-3"><span class="text-tertiary mt-1 shrink-0">—</span><span>Co-founded a student club dedicated to fighting food insecurity in NYC while celebrating the diverse cultural backgrounds of the Browning community.</span></li>
-<li class="flex gap-3"><span class="text-tertiary mt-1 shrink-0">—</span><span>Organizes food drives, volunteer shifts at soup kitchens, in-school cultural cooking events, and fundraising campaigns.</span></li>
-<li class="flex gap-3"><span class="text-tertiary mt-1 shrink-0">—</span><span>Authored the official club proposal submitted to Browning School administration, securing formal recognition.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Founded a middle school club focused on food recovery in partnership with Grassroots Grocery.</span></li>
 </ul>
+</div>
+<!-- Sub-block: Tastes of Home -->
+<div>
+<h4 class="font-headline-md text-body-lg text-on-surface mb-1">Tastes of Home Club</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4">Co-Founder &amp; Leader · February 2026 – Present</p>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-3">
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Co-founded a student club dedicated to fighting food insecurity in New York City while celebrating the diverse cultural backgrounds of the Browning community.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Recruited 10+ members and authored the official club proposal to Browning School administration, securing recognition for the club.</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Organized food drives donating 100+ pounds of food, coordinated volunteer shifts at God's Love We Deliver and with Grassroots Grocery, hosted in-school cultural cooking events, and ran fundraising campaigns.</span></li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -280,40 +308,46 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Technical Skills -->
-<div class="rack-focus bg-surface-container border border-white/5 rounded-DEFAULT p-8 shadow-[0_10px_30px_rgba(0,0,0,0.5)]" data-delay="0">
+<div class="rack-focus md:pr-gutter" data-delay="0">
 <span class="font-label-caps text-label-caps text-tertiary mb-6 block">Technical</span>
 <ul class="font-body-md text-body-md text-on-surface-variant space-y-3">
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>HTML &amp; CSS</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>JavaScript</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Python</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Git &amp; GitHub</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>AI Prompting &amp; Optimization</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Web Development (design → build → deploy)</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>IT Support &amp; Troubleshooting</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Google Business Profile &amp; SEO basics</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>No-code / low-code familiarity</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>HTML &amp; CSS</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>JavaScript</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Python</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Git &amp; GitHub</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>AI Prompting &amp; Optimization</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Web Development (full project lifecycle — design → build → deploy)</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>IT Support &amp; Troubleshooting</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Google Business Profile &amp; SEO basics</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>No-code / low-code familiarity</span></li>
 </ul>
 </div>
 <!-- Academic Skills -->
-<div class="rack-focus bg-surface-container border border-white/5 rounded-DEFAULT p-8 shadow-[0_10px_30px_rgba(0,0,0,0.5)]" data-delay="150">
+<div class="rack-focus md:px-gutter md:border-l md:border-white/10" data-delay="150">
 <span class="font-label-caps text-label-caps text-tertiary mb-6 block">Academic</span>
 <ul class="font-body-md text-body-md text-on-surface-variant space-y-3">
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Research &amp; writing</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Critical reading and analysis</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Independent project management</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Time management across school and business</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Research &amp; writing</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Critical reading and analysis</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Independent project management</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Time management across school and business responsibilities</span></li>
+</ul>
+<span class="font-label-caps text-label-caps text-tertiary mt-8 mb-6 block">Languages</span>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-3">
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>English — native</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Russian — fluent</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>French — studying</span></li>
 </ul>
 </div>
 <!-- Soft Skills -->
-<div class="rack-focus bg-surface-container border border-white/5 rounded-DEFAULT p-8 shadow-[0_10px_30px_rgba(0,0,0,0.5)]" data-delay="300">
+<div class="rack-focus md:pl-gutter md:border-l md:border-white/10" data-delay="300">
 <span class="font-label-caps text-label-caps text-tertiary mb-6 block">Personal</span>
 <ul class="font-body-md text-body-md text-on-surface-variant space-y-3">
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Entrepreneurial thinking</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Leadership (club + company founder)</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Client communication &amp; professionalism</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Creative problem-solving</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Self-motivation and initiative</span></li>
-<li class="flex gap-3"><span class="text-tertiary shrink-0">—</span><span>Community-oriented mindset</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Entrepreneurial thinking</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Leadership (founding and running a club + a company)</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Client communication &amp; professionalism</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Creative problem-solving</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Self-motivation and initiative</span></li>
+<li class="flex gap-3 items-baseline"><span class="text-tertiary shrink-0">—</span><span>Community-oriented mindset</span></li>
 </ul>
 </div>
 </div>
@@ -329,7 +363,7 @@
                     parizhskypeter@gmail.com
                 </a>
 <div class="flex justify-center gap-6 mt-16">
-<a href="https://www.linkedin.com/in/peter-p-b14002405/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-on-surface-variant hover:text-on-surface transition-colors duration-300">
+<a href="https://www.linkedin.com/in/peter-parizhsky/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-on-surface-variant hover:text-on-surface transition-colors duration-300">
   <svg fill="currentColor" class="w-[53px] h-[53px] -translate-y-[3px]" viewBox="-2 -2 24 24" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M10 0A10 10 0 0 1 20 10A10 10 0 0 1 10 20A10 10 0 0 1 0 10A10 10 0 0 1 10 0ZM15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z"/>
 </svg>
@@ -342,18 +376,24 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="relative z-10 w-full mt-section-gap bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5">
-<div class="max-w-container-max mx-auto px-margin-safe py-gutter flex flex-col md:flex-row justify-between items-center gap-unit">
-<div class="font-headline-md text-headline-md text-primary font-headline-md text-body-md tracking-[0.4em] uppercase">
-                PETER PARIZHSKY
-            </div>
-<div class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim text-center md:text-left">
-                © 2026 PETER PARIZHSKY. ALL RIGHTS RESERVED.
-            </div>
-<div class="flex gap-6">
-<a class="font-label-caps text-label-caps text-outline dark:text-outline-variant hover:text-tertiary dark:hover:text-tertiary-fixed transition-colors duration-500" href="#about">About</a>
-<a class="font-label-caps text-label-caps text-outline dark:text-outline-variant hover:text-tertiary dark:hover:text-tertiary-fixed transition-colors duration-500" href="#resume">Resume</a>
-<a class="font-label-caps text-label-caps text-outline dark:text-outline-variant hover:text-tertiary dark:hover:text-tertiary-fixed transition-colors duration-500" href="#skills">Skills</a>
+<footer class="relative z-10 w-full bg-surface-container-lowest border-t border-white/10">
+<div class="max-w-container-max mx-auto px-margin-safe pt-12 pb-8">
+<!-- Row 1: wordmark + nav -->
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<a href="#" class="font-label-caps text-label-caps tracking-[0.4em] uppercase text-on-surface hover:text-tertiary transition-colors duration-300">PETER PARIZHSKY</a>
+<nav class="flex flex-wrap justify-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#about">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#resume">Resume</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#skills">Skills</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#contact">Contact</a>
+</nav>
+</div>
+<!-- Internal divider -->
+<div class="border-t border-white/5 my-8"></div>
+<!-- Row 2: meta -->
+<div class="flex flex-col md:flex-row justify-between items-center gap-2 font-label-caps text-label-caps text-outline">
+<span>© 2026 PETER PARIZHSKY · ALL RIGHTS RESERVED</span>
+<span>NEW YORK CITY</span>
 </div>
 </div>
 </footer>
@@ -373,6 +413,24 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.rack-focus').forEach(el => observer.observe(el));
+
+  // Active-section nav highlight
+  const navLinks = document.querySelectorAll('[data-nav-link]');
+  const sectionMap = new Map(
+    [...navLinks].map(a => [a.getAttribute('href').slice(1), a])
+  );
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      const link = sectionMap.get(e.target.id);
+      if (!link || !e.isIntersecting) return;
+      navLinks.forEach(l => l.classList.remove('text-tertiary', 'border-b', 'border-tertiary'));
+      link.classList.add('text-tertiary', 'border-b', 'border-tertiary');
+    });
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+  ['about','resume','skills','contact'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) navObserver.observe(el);
+  });
 
   // Mobile menu toggle
   const mobileBtn = document.getElementById('mobile-menu-btn');
