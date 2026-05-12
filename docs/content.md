@@ -6,19 +6,19 @@
 ## 1. ABOUT ME PAGE
 
 ### Introduction
-I'm Peter Parizhsky, a 10th grader in New York City. I started a web development and IT support company, Tech-Savvies, in 2020. I was 10 and mostly just wanted to build things and see what happened. It turned into actual work: websites for local businesses, some IT stuff, a lot of learning from what didn't work. I'm still running it.
+I'm Peter Parizhsky, a 10th grader in New York City. I founded Tech-Savvies, a web development and IT support company, in 2020. I was ten, motivated by curiosity and a drive to build. What began as experimentation grew into a working practice: websites for local businesses, IT support engagements, and steady lessons from every project. I continue to lead the company today.
 
 ### Interests, Hobbies & Passions
-- Technology & Building: I like building websites and understanding how software works further down than most people go. I'm happiest when something I made is actually being used.
-- Gaming: I play a lot of strategy games. I'd probably say it makes me think better about systems and tradeoffs, but I also just like playing.
-- Writing & Reading: I read pretty broadly, fiction, tech writing, whatever I find. Writing is something I've had to get better at deliberately, and I have.
-- Community & Volunteering: I run a club and do volunteer work. I started because I wanted to do something real outside of school, not just resume stuff.
+- Technology & Building: I enjoy building websites and studying how software works at a deeper technical level. The work is most rewarding when something I have built is in active use.
+- Gaming: Strategy games are a long-standing interest; they sharpen how I reason about systems and tradeoffs, and I enjoy them on their own merits.
+- Writing & Reading: I read widely across fiction and technical writing. Writing itself is a craft I have worked to develop deliberately, and one I continue to refine.
+- Community & Volunteering: I lead a student club and contribute regularly to volunteer work, motivated by a commitment to meaningful service beyond the classroom.
 
 ### Academic & Career Goals
-I'm planning on studying business or hospitality in college. After that I want to keep building things, whether that's through Tech-Savvies or somewhere else. I don't have every step figured out, but I know what direction I'm going.
+I plan to study business or hospitality in college and to continue building — whether through Tech-Savvies or a new venture. The exact path remains open, but the direction is clear.
 
 ### Personal Background
-I grew up in New York City. Growing up here, you're constantly around people who are nothing like you, and that changes how you see things. It's a big part of what led me to start Tastes of Home.
+I grew up in New York City. Living here means being surrounded by people whose backgrounds differ sharply from one's own, and that perspective has shaped how I see the world. It is a core reason I co-founded Tastes of Home.
 
 ---
 

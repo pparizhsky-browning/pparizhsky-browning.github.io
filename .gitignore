@@ -1,1 +1,3 @@
 .claude/
+.live-server.pid
+.live-server.log
