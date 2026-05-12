@@ -205,39 +205,4 @@ Open `index.html` directly in a browser, or deploy the single file to any static
 
 ## User Interaction Flowchart
 
-```mermaid
-flowchart TD
-    A([User Opens Website]) --> B
-
-    B["Hero Section\nPETER PARIZHSKY\n10th grade · founder · builder · NYC"]
-    B --> NAV{Navigation Menu}
-
-    NAV -->|Click 'About'| C
-    NAV -->|Click 'Resume'| D
-    NAV -->|Click 'Skills'| E
-    NAV -->|Click 'Contact'| F
-    NAV -->|Click logo| B
-
-    C["About Me Section\nBio · Interests · Goals · NYC background"]
-    C --> NAV
-
-    D["Resume Section\nTech-Savvies · Browning School · Tastes of Home"]
-    D --> NAV
-
-    E["Skills Section\nTechnical · Academic · Personal"]
-    E --> NAV
-
-    F["Contact Section\nparizhskypeter@gmail.com"]
-    F --> ACT{User Action}
-    ACT -->|Click email| G([Opens Email Client])
-    ACT -->|Click LinkedIn| H([Opens LinkedIn Profile])
-    ACT -->|Click GitHub| I([Opens GitHub Profile])
-    ACT -->|Scroll up or use nav| B
-
-    style A fill:#10b981,color:#000,stroke:none
-    style G fill:#10b981,color:#000,stroke:none
-    style H fill:#0077b5,color:#fff,stroke:none
-    style I fill:#333,color:#fff,stroke:none
-```
-
-*(See `flowchart.png` for rendered version)*
+![User Interaction Flowchart](flowchart.png)
